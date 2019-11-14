@@ -36,7 +36,7 @@ def multiple_gcd(keys):
 
     final_results = []
 
-    for i in range(0, len(keys), 2):
+    for i in range(0, len(keys) - 1, 2):
         final_results.append(gcd(keys[i], results_for_pairs[i // 2] * keys[i + 1]))
         final_results.append(gcd(keys[i + 1], results_for_pairs[i // 2] * keys[i]))
 
@@ -51,6 +51,6 @@ def multiple_gcd(keys):
 
 
 if __name__ == "__main__":
-    ks = [10, 51, 6, 77]
+    ks = [10, 51, 74]
     res = multiple_gcd(ks)
     print(res)
